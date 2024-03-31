@@ -1063,7 +1063,7 @@ typedef struct WGPUSurfaceDescriptorFromCanvasHTMLSelector {
 
 typedef struct WGPUSurfaceDescriptorFromDrmFd {
     WGPUChainedStruct chain;
-    uint32_t fd;
+    int32_t fd;
 } WGPUSurfaceDescriptorFromDrmFd WGPU_STRUCTURE_ATTRIBUTE;
 
 typedef struct WGPUSurfaceDescriptorFromMetalLayer {

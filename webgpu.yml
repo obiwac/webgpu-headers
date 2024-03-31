@@ -2936,7 +2936,7 @@ structs:
       - name: fd
         doc: |
           TODO
-        type: uint32
+        type: int32
 
   - name: surface_descriptor_from_xlib_window
     doc: |
