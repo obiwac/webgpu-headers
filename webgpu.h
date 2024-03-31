@@ -121,6 +121,7 @@ struct WGPUSurfaceConfiguration;
 struct WGPUSurfaceDescriptor;
 struct WGPUSurfaceDescriptorFromAndroidNativeWindow;
 struct WGPUSurfaceDescriptorFromCanvasHTMLSelector;
+struct WGPUSurfaceDescriptorFromDrmFd;
 struct WGPUSurfaceDescriptorFromMetalLayer;
 struct WGPUSurfaceDescriptorFromWaylandSurface;
 struct WGPUSurfaceDescriptorFromWindowsHWND;
@@ -427,6 +428,7 @@ typedef enum WGPUSType {
     WGPUSType_SurfaceDescriptorFromWaylandSurface = 0x00000008,
     WGPUSType_SurfaceDescriptorFromAndroidNativeWindow = 0x00000009,
     WGPUSType_SurfaceDescriptorFromXcbWindow = 0x0000000A,
+    WGPUSType_SurfaceDescriptorFromDrmFd = 0x0000000B,
     WGPUSType_RenderPassDescriptorMaxDrawCount = 0x0000000F,
     WGPUSType_Force32 = 0x7FFFFFFF
 } WGPUSType WGPU_ENUM_ATTRIBUTE;
@@ -1058,6 +1060,11 @@ typedef struct WGPUSurfaceDescriptorFromCanvasHTMLSelector {
     WGPUChainedStruct chain;
     char const * selector;
 } WGPUSurfaceDescriptorFromCanvasHTMLSelector WGPU_STRUCTURE_ATTRIBUTE;
+
+typedef struct WGPUSurfaceDescriptorFromDrmFd {
+    WGPUChainedStruct chain;
+    int32_t fd;
+} WGPUSurfaceDescriptorFromDrmFd WGPU_STRUCTURE_ATTRIBUTE;
 
 typedef struct WGPUSurfaceDescriptorFromMetalLayer {
     WGPUChainedStruct chain;

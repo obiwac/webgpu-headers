@@ -768,6 +768,9 @@ enums:
       - name: surface_descriptor_from_xcb_window
         doc: |
           TODO
+      - name: surface_descriptor_from_drm_fd
+        doc: |
+          TODO
       - name: render_pass_descriptor_max_draw_count
         value: 0x000F
         doc: |
@@ -2922,6 +2925,18 @@ structs:
         doc: |
           TODO
         type: uint32
+
+  - name: surface_descriptor_from_drm_fd
+    doc: |
+      TODO
+    type: extension_in
+    extends:
+      - surface_descriptor
+    members:
+      - name: fd
+        doc: |
+          TODO
+        type: int32
 
   - name: surface_descriptor_from_xlib_window
     doc: |
